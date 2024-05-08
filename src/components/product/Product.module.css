@@ -1,0 +1,10 @@
+.flex_wrapper{
+    display: flex;
+    margin: 5rem;
+}
+.info{
+    width: 50%;
+}
+.carousel{
+    width: 50%;
+}
