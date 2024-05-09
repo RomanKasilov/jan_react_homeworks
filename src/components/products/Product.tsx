@@ -1,23 +1,14 @@
 import React, {FC} from "react";
 import {Carousel, CarouselItem} from "react-bootstrap";
 
+import {IProductProps} from "../../types";
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import style from './Product.module.css'
 
 
-export interface IProductProps {
-    "id": number,
-    "title": string,
-    "description": string,
-    "price": number,
-    "discountPercentage"?: number,
-    "rating"?: number,
-    "stock"?: number,
-    "brand"?: string,
-    "category"?: string,
-    "thumbnail"?: string,
-    "images": string[]
-}
+
+
 
 type IProductTypeProps = IProductProps & { children?: React.ReactNode }
 const Product: FC<IProductTypeProps> = ({title, description, price, images}) => {
