@@ -4,7 +4,7 @@ import {Product} from "./Product";
 import {IProductProps} from "../../types";
 
 
-const Products: FC= () => {
+const Products: FC = () => {
     const [products, setProducts] = useState<IProductProps[]>([])
     useEffect(() => {
         fetch('https://dummyjson.com/products')
@@ -15,7 +15,8 @@ const Products: FC= () => {
     return (
         <div>
             {
-products.map(({id, title, description, price, images}:IProductProps) => <Product key={id} id={id} title={title} description={description} price={price} images={images}/> )
+                products.map(({id, title, description, price, images}: IProductProps) =>
+                    <Product key={id} id={id} title={title} description={description} price={price} images={images}/>)
             }
         </div>
     );

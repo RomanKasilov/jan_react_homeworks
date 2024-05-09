@@ -7,10 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import style from './Product.module.css'
 
 
-
-
-
 type IProductTypeProps = IProductProps & { children?: React.ReactNode }
+
 const Product: FC<IProductTypeProps> = ({title, description, price, images}) => {
 
     return (
