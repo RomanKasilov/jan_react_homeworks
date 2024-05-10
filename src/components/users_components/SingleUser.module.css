@@ -1,0 +1,39 @@
+.wrapper{
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    border: 5px solid aqua;
+    border-radius: 33px 33px 0 33px;
+    height: 200px;
+    transition: 20ms;
+}
+.wrapper:hover{
+    transform: scale(1.01);
+    /*background-color: #a1ecec;*/
+    transition: 50ms;
+}
+.userInfo{
+    margin-left: 10px;
+    width: 50%;
+
+}
+.box{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.img{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 2px solid aqua;
+}
+.username{
+    text-align: center;
+}
+button:hover{
+cursor: pointer;
+    border-radius: 10px;
+}
