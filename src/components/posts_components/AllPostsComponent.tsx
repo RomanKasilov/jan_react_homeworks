@@ -3,7 +3,7 @@ import React, {FC} from "react";
 import {SinglePostComponent} from "./SinglePostComponent";
 
 import {IPost} from "../../models";
-import styles from './AllPostsComponent.module.css'
+import styles from './AllPosts.module.css'
 
 
 interface IProps {

@@ -1,16 +1,17 @@
+
 .wrapper{
-    margin: 5px;
+    margin: 15px;
     display: flex;
     justify-content: space-around;
     border: 5px solid aqua;
     border-radius: 33px 33px 0 33px;
     height: 200px;
-    transition: 20ms;
+    width: 40vw;
+    transition: 75ms;
 }
 .wrapper:hover{
-    transform: scale(1.01);
-    /*background-color: #a1ecec;*/
-    transition: 50ms;
+    transform: scale(1.05);
+    transition:1s;
 }
 .userInfo{
     margin-left: 10px;
