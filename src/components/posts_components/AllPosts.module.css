@@ -2,13 +2,15 @@
 .wrapper {
     position: fixed;
     right: 10px;
+    overflow: auto;
     height: 100vh;
     width: 45vw;
+    margin: 5px;
+    padding: 5px;
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjCWDgM-VfOqeJ8szhfgh4NlLUSNSQQIq2uT3Y6a6QHKnsV8Uhp5Cy1Y2REw&s");
     background-size: cover;
     background-attachment: fixed;
     border: aqua 3px solid;
     border-radius: 10px;
-    margin: 5px;
-padding: 5px;
+
 }
