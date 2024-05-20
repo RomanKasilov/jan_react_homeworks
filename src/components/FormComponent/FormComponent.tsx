@@ -12,7 +12,7 @@ const FormComponent = () => {
         handleSubmit,
         formState: {errors, isValid}
     } = useForm<ISavePostModel>(
-        {mode: "onTouched", resolver: joiResolver(savePostValidator)})
+        {mode: "onSubmit", resolver: joiResolver(savePostValidator)})
 
     const savePost = (data: ISavePostModel) => {
         postService.savePost(data)
