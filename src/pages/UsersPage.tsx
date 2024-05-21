@@ -1,9 +1,9 @@
-import {Users} from "../components/UsersComponents";
+import {Users} from "../components";
 
 const UsersPage = () => {
     return (
         <>
-      <Users/>
+            <Users/>
         </>
     );
 };

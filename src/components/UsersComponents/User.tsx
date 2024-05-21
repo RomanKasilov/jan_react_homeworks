@@ -1,13 +1,15 @@
-import {IUserModel} from "../../models/IUserModel";
+import {IUserModel} from "../../models";
+
 import React, {FC} from "react";
+
 interface IProps {
-    user: IUserModel,
-    children?:React.ReactNode
+    user: IUserModel
 }
-const User:FC<IProps> = (user) => {
+
+const User: FC<IProps> = ({user}) => {
     return (
         <div>
-            User
+            {user.name} {user.username}
         </div>
     );
 };

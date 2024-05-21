@@ -1,9 +1,7 @@
-import {createBrowserRouter, Link} from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
+
 import {MainLayout} from "../layouts";
-import {UsersPage} from "../pages";
-import {PostsPage} from "../pages";
-import {CommentsPage} from "../pages";
-import {Users} from "../components/UsersComponents";
+import {CommentsPage, MainPage, PostsPage, UsersPage} from "../pages";
 
 const router = createBrowserRouter([
     {
@@ -13,7 +11,7 @@ const router = createBrowserRouter([
             {path: 'users', element: <UsersPage/>},
             {path: 'posts', element: <PostsPage/>},
             {path: 'comments', element: <CommentsPage/>},
-            {index: true, element:<UsersPage/>}
+            {index: true, element:<MainPage/>}
         ]
     }
 ])

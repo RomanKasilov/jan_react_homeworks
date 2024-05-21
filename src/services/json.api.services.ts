@@ -1,8 +1,9 @@
 import axios from "axios";
-import {IUserModel} from "../models/IUserModel";
-import {IAxiosResponseModel} from "../models/IAxiosResponseModel";
-import {IPostModel} from "../models/IPostModel";
-import {ICommentModel} from "../models/ICommentModel";
+
+import {IAxiosResponseModel} from "../models";
+import {ICommentModel} from "../models";
+import {IPostModel} from "../models";
+import {IUserModel} from "../models";
 
 const axiosJsonInstance = axios.create({
     baseURL: 'https://jsonplaceholder.typicode.com',
@@ -16,12 +17,12 @@ const usersServices = {
     }
 }
 const postsServices = {
-    getAllPosts: (): IAxiosResponseModel<IPostModel> => {
+    getAllPosts: (): IAxiosResponseModel<IPostModel[]> => {
         return axiosJsonInstance.get('/posts')
     }
 }
 const commentsServices = {
-    getAllComments: (): IAxiosResponseModel<ICommentModel> => {
+    getAllComments: (): IAxiosResponseModel<ICommentModel[]> => {
         return axiosJsonInstance.get('/comments')
     },
 }
