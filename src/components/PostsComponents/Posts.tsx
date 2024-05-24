@@ -7,7 +7,7 @@ const Posts = () => {
     const posts = useStateEffect<IPostModel>(postsServices.getAllPosts())
     return (
         <div>
-            {posts.map(post => <Post post={post}/>)}
+            {posts.map(post => <Post key ={post.postId} post={post}/>)}
         </div>
     );
 };

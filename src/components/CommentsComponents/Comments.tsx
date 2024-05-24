@@ -7,7 +7,7 @@ const Comments = () => {
     const comments = useStateEffect<ICommentModel>(commentsServices.getAllComments())
     return (
         <div>
-            {comments.map(comment => <Comment comment={comment}/>)}
+            {comments.map(comment => <Comment key = {comment.commentId} comment={comment}/>)}
         </div>
     );
 };
