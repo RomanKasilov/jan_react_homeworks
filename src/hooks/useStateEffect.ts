@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
-import {IRespModel} from "../models/IRespModel";
+import {IRespModel} from "../models";
 
 
-const useStateEffect = <T>(service:IRespModel<T[]> )=>{
+const useStateEffect = <T>(service: IRespModel<T[]>) => {
     const [items, setItems] = useState<T[]>([])
     useEffect(() => {
         service.then(({data}) => setItems(data))

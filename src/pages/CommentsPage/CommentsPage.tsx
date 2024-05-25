@@ -13,8 +13,8 @@ const CommentsPage = () => {
     const id = postId ? postId : statePostId
     const comments = useStateEffect(commentService.getCommentsByPostID(id))
 
-    const navigateBack    = useNavigate()
-const navigateToUsers = useNavigate()
+    const navigateBack = useNavigate()
+    const navigateToUsers = useNavigate()
     return (
         <div className={css.wrapper}>
             <div className={css.subHeader}>
@@ -22,7 +22,7 @@ const navigateToUsers = useNavigate()
                 <button onClick={() => navigateBack(-1)}>Back to User's posts</button>
             </div>
             <Comments comments={comments}/>
-            <button className={css.backToUsersButton} onClick={()=>navigateToUsers('/users')}>
+            <button className={css.backToUsersButton} onClick={() => navigateToUsers('/users')}>
                 Back to User Page
             </button>
         </div>

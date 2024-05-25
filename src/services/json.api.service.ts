@@ -1,9 +1,10 @@
 import axios from "axios";
+
 import {baseURL} from "../constants";
 
 const axiosJsonInstance = axios.create({
     baseURL,
-    headers:{
+    headers: {
         'Content-type': 'application/json; charset=UTF-8'
     }
 })

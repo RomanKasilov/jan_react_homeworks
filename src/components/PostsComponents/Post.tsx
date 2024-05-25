@@ -1,14 +1,16 @@
-import {IPostModel} from "../../models";
 import {FC, PropsWithChildren} from "react";
 import {useNavigate} from "react-router-dom";
+
+import {IPostModel} from "../../models";
 import {urls} from "../../constants";
 import css from './post.module.css'
 
 interface IProps extends PropsWithChildren {
-post:IPostModel
+    post: IPostModel
 }
-const Post:FC<IProps> = ({post}) => {
-const navigate = useNavigate()
+
+const Post: FC<IProps> = ({post}) => {
+    const navigate = useNavigate()
 
     return (
         <div className={css.post_box}>
@@ -18,12 +20,12 @@ const navigate = useNavigate()
             </div>
 
             <button
-                onClick={()=>
+                onClick={() =>
                     navigate(
                         `/${urls.commentsByPost(post.id.toString())}`,
-                        {state:{post}}
+                        {state: {post}}
                     )
-            }>
+                }>
                 Show all comments
             </button>
             <hr/>

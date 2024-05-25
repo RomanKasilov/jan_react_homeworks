@@ -5,7 +5,7 @@ import css from './homePage.module.css'
 const HomePage = () => {
     return (
         <div className={css.wrap}>
-            <div    >
+            <div>
                 <h1>Home page</h1>
                 <div>Welcome!</div>
             </div>

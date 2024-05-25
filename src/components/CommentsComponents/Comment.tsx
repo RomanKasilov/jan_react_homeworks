@@ -1,10 +1,12 @@
 import {FC, PropsWithChildren} from "react";
 
 import {ICommentModel} from "../../models";
+
 interface IProps extends PropsWithChildren {
-    comment:ICommentModel
+    comment: ICommentModel
 }
-const Comment:FC<IProps> = ({comment}) => {
+
+const Comment: FC<IProps> = ({comment}) => {
     return (
         <div>
             <h3>{comment.name}</h3>

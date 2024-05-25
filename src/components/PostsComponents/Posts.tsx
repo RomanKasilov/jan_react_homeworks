@@ -11,7 +11,7 @@ interface IProps extends PropsWithChildren {
 const Posts: FC<IProps> = ({posts}) => {
     return (
         <div className={css.posts_wrapper}>
-            {posts.map(post => <Post  key={post.id} post={post}/>)}
+            {posts.map(post => <Post key={post.id} post={post}/>)}
         </div>
     );
 };

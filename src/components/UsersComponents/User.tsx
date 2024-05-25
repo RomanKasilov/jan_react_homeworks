@@ -11,16 +11,13 @@ interface IProps extends PropsWithChildren {
 const User: FC<IProps> = ({user}) => {
     const navigate = useNavigate()
     return (
-        <div className={css.singleUser_box}>
-            <div className={css.user_info}>
-                <p>{user.username}</p>
-                <p>{user.name}</p>
-            </div>
-            <button onClick={() => {
-                navigate(`/users/${user.id}/posts`, {state: {user}})
-            }}>
-                Show user's posts
-            </button>
+        <div className={css.singleUser_box}
+             onClick={() => {
+                 navigate(`/users/${user.id}/posts`, {state: {user}})
+             }}
+        >
+            <p>{user.username}</p>
+            <p>{user.name}</p>
         </div>
     );
 };

@@ -1,10 +1,10 @@
 import axiosJsonInstance from "./json.api.service";
+
 import {urls} from "../constants";
-import {IRespModel} from "../models";
-import {IPostModel} from "../models";
+import {IRespModel, IPostModel} from "../models";
 
 const PostService = {
-    getPostsByUserID: (id: string):IRespModel<IPostModel[]>=>{
+    getPostsByUserID: (id: string): IRespModel<IPostModel[]> => {
         return axiosJsonInstance.get(urls.postsByUser(id))
     }
 }

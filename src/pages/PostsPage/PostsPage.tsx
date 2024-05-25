@@ -1,4 +1,5 @@
 import {useLocation, useNavigate, useParams} from "react-router-dom";
+
 import useStateEffect from "../../hooks/useStateEffect";
 import postService from "../../services/postService";
 import {Posts} from "../../components";
@@ -12,7 +13,7 @@ const PostsPage = () => {
     const id: string = userId ? userId : state.user.id.toString()
     const posts = useStateEffect(postService.getPostsByUserID(id))
 
-    const navigateBack    = useNavigate()
+    const navigateBack = useNavigate()
 
     return (
         <div className={css.wrapper}>

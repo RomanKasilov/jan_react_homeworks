@@ -10,7 +10,7 @@ const UsersPage = () => {
 
     return (
         <div className={css.wrap}>
-            <h2>There are all users what we have...</h2>
+            <h2>There are all users what we have...Click to see User's posts</h2>
             <Users users={users}/>
         </div>
     );

@@ -14,17 +14,17 @@
 }
 
 .backToUsersButton {
-    margin:15px;
+    margin: 15px;
     font-size: 1.2rem;
     font-weight: 600;
-    transition: 1.1s;
     color: #ec5d32;
+    transition: 1.1s;
 
 }
 
 .backToUsersButton:hover {
+    transition: 1.1s;
     cursor: pointer;
     color: #60c8ed;
-    transition: 1.1s;
 }
 

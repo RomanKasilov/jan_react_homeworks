@@ -5,13 +5,14 @@ import {Comment} from "./Comment";
 import css from './comments.module.css'
 
 interface IProps extends PropsWithChildren {
-comments: ICommentModel[]
+    comments: ICommentModel[]
 }
-const Comments:FC<IProps> = ({comments}) => {
+
+const Comments: FC<IProps> = ({comments}) => {
 
     return (
         <div className={css.comments_box}>
-            {comments.map(comment=><Comment comment={comment} key={comment.id}/>)}
+            {comments.map(comment => <Comment comment={comment} key={comment.id}/>)}
         </div>
     );
 };
