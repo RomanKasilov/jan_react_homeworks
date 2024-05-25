@@ -1,0 +1,30 @@
+.wrapper {
+    height: 70vh;
+    overflow: auto;
+}
+
+.subHeader {
+    background: linear-gradient(90deg, rgba(73, 154, 245, 1) 15%, rgba(195, 219, 241, 0.804359243697479) 70%);
+    padding: 5px 0 10px 10px;
+    color: #efddf4;
+    font-style: italic;
+
+    position: sticky;
+    top: 0;
+}
+
+.backToUsersButton {
+    margin:15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 1.1s;
+    color: #ec5d32;
+
+}
+
+.backToUsersButton:hover {
+    cursor: pointer;
+    color: #60c8ed;
+    transition: 1.1s;
+}
+

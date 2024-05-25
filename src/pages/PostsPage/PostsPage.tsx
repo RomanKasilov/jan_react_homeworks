@@ -1,7 +1,8 @@
 import {useLocation, useNavigate, useParams} from "react-router-dom";
 import useStateEffect from "../../hooks/useStateEffect";
 import postService from "../../services/postService";
-import {Posts} from "../../components/PostsComponents";
+import {Posts} from "../../components";
+import css from './postPage.module.css'
 
 const PostsPage = () => {
 
@@ -14,10 +15,12 @@ const PostsPage = () => {
     const navigateBack    = useNavigate()
 
     return (
-        <div>
-            <div>
+        <div className={css.wrapper}>
+            <div className={css.subHeader}>
                 <h2>All posts of current User</h2>
-                <button onClick={() => navigateBack(-1)}>Back to Users</button>
+                <button onClick={() => navigateBack(-1)}>
+                    Back to Users
+                </button>
             </div>
             <Posts posts={posts}/>
         </div>

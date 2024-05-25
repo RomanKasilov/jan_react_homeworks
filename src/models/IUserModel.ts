@@ -1,5 +1,5 @@
 export interface IUserModel {
     id: number,
     name: string,
-    nickName: string
+    username: string
 }

@@ -1,0 +1,7 @@
+.users_box {
+    height: 65vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

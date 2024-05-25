@@ -1,0 +1,14 @@
+.header{
+    height: 10vh;
+    border-bottom: black 1px solid;
+    padding: 1vh 2vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    font-weight: 600;
+}

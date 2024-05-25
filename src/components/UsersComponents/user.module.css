@@ -1,0 +1,50 @@
+.singleUser_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    width: calc(100% / 3 - 2rem);
+    height: 21%;
+
+    border: 3px solid cadetblue;
+    border-radius: 15px;
+    box-sizing: border-box;
+
+    transition: 1.5s;
+}
+
+.singleUser_box:hover {
+    background-color: cadetblue;
+    transition: 1.5s;
+}
+
+.singleUser_box button {
+    height: 20px;
+    margin: 3px;
+}
+.singleUser_box button:hover{
+    cursor: pointer;
+}
+
+.user_info {
+    height: 60%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.user_info p:nth-child(1) {
+    margin: auto;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.user_info p:nth-child(2) {
+    margin: auto;
+}
+
+

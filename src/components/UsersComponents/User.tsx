@@ -1,6 +1,8 @@
 import {FC, PropsWithChildren} from "react";
-import {IUserModel} from "../../models";
 import {useNavigate} from "react-router-dom";
+
+import {IUserModel} from "../../models";
+import css from './user.module.css'
 
 interface IProps extends PropsWithChildren {
     user: IUserModel
@@ -9,15 +11,15 @@ interface IProps extends PropsWithChildren {
 const User: FC<IProps> = ({user}) => {
     const navigate = useNavigate()
     return (
-        <div>
-            <div>
-                <h3>{user.nickName}</h3>
-                <div>{user.name}</div>
+        <div className={css.singleUser_box}>
+            <div className={css.user_info}>
+                <p>{user.username}</p>
+                <p>{user.name}</p>
             </div>
-            <button onClick = {()=>{
+            <button onClick={() => {
                 navigate(`/users/${user.id}/posts`, {state: {user}})
             }}>
-                Show users posts
+                Show user's posts
             </button>
         </div>
     );

@@ -9,6 +9,7 @@ const Comment:FC<IProps> = ({comment}) => {
         <div>
             <h3>{comment.name}</h3>
             <div>{comment.body}</div>
+            <hr/>
         </div>
     );
 };
