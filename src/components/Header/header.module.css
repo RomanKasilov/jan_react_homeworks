@@ -1,7 +1,8 @@
 .header {
     height: 10vh;
-    border-bottom: black 1px solid;
     padding: 1vh 2vw;
+    border-bottom: black 1px solid;
+    box-sizing: border-box;
 
     display: flex;
     justify-content: space-between;
