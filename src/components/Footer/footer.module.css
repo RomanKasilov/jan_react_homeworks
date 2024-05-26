@@ -1,6 +1,7 @@
 .footer {
+    box-sizing: border-box;
+    padding: 20px 15px 0 15px;
     height: 20vh;
-    /*padding: 1vh 2vw;*/
     background: linear-gradient(180deg, rgba(36, 37, 38, 1) 0%, rgba(119, 118, 120, 1) 70%)
 }
 
