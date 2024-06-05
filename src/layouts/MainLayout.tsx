@@ -1,11 +1,10 @@
-import {Outlet} from "react-router-dom";
-import {Header} from "../components/Header/Header";
-import {DataContext} from "../context/DataContext";
 import {useEffect, useState} from "react";
-import {commentsService, postsService, usersService} from "../services/json.api.service";
-import {IUserModel} from "../models/IUserModel";
-import {IPostModel} from "../models/IPostModel";
-import {ICommentModel} from "../models/ICommentModel";
+import {Outlet} from "react-router-dom";
+
+import {Header} from "../components";
+import {DataContext} from "../context";
+import {commentsService, postsService, usersService} from "../services";
+import {IUserModel, ICommentModel, IPostModel} from "../models";
 
 const MainLayout = () => {
     const [allUsers, setAllUsers] = useState<IUserModel[]>([])
@@ -20,15 +19,9 @@ const MainLayout = () => {
         <div>
             <Header/>
             <DataContext.Provider value={{
-                users: {
-                    allUsers: allUsers
-                },
-                posts: {
-                    allPosts: allPosts
-                },
-                comments: {
-                    allComments: allComments
-                }
+                users: {allUsers: allUsers},
+                posts: {allPosts: allPosts},
+                comments: {allComments: allComments}
             }}>
                 <Outlet/>
             </DataContext.Provider>

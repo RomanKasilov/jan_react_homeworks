@@ -1,18 +1,12 @@
 import {createBrowserRouter, RouteObject} from "react-router-dom";
-import {MainLayout} from "../layouts/MainLayout";
-import {AllUsersPage} from "../pages/AllUsersPage";
-import {AllPostsPage} from "../pages/AllPostsPage";
-import {AllCommentsPage} from "../pages/AllCommentsPage";
-import {UsersPostsPage} from "../pages/UsersPostsPage";
-import {PostsCommentsPage} from "../pages/PostsCommentsPage";
 
-
-
+import {MainLayout} from "../layouts";
+import {AllUsersPage, PostsCommentsPage, AllPostsPage, AllCommentsPage, UsersPostsPage} from "../pages";
 
 const routes: RouteObject[] = [
     {
         path: '/', element: <MainLayout/>, children: [
-            {index:true, element:<AllUsersPage/>},
+            {index: true, element: <AllUsersPage/>},
             {path: 'users', element: <AllUsersPage/>},
             {path: 'posts', element: <AllPostsPage/>},
             {path: 'comments', element: <AllCommentsPage/>},

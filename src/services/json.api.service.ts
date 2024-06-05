@@ -1,7 +1,5 @@
 import axios from "axios";
-import {IUserModel} from "../models/IUserModel";
-import {IPostModel} from "../models/IPostModel";
-import {ICommentModel} from "../models/ICommentModel";
+import {IUserModel, IPostModel, ICommentModel} from "../models";
 
 const axiosInstance = axios.create({
     baseURL: 'https://jsonplaceholder.typicode.com',
@@ -11,21 +9,22 @@ const axiosInstance = axios.create({
 })
 
 const usersService = {
-    getAllUsers: async ():Promise<IUserModel[]> => {
+    getAllUsers: async (): Promise<IUserModel[]> => {
         const response = await axiosInstance.get('users');
         return response.data
     }
 };
 const postsService = {
-    getAllPosts: async ():Promise<IPostModel[]> => {
+    getAllPosts: async (): Promise<IPostModel[]> => {
         const allPosts = await axiosInstance.get('posts');
         return allPosts.data
     }
 };
 const commentsService = {
-    getAllComments: async ():Promise<ICommentModel[]> => {
+    getAllComments: async (): Promise<ICommentModel[]> => {
         const allComments = await axiosInstance.get('comments');
         return allComments.data
     }
 };
-export {commentsService,postsService,usersService}
+
+export {commentsService, postsService, usersService}

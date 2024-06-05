@@ -1,11 +1,9 @@
-import {useContext} from "react";
-import {DataContext} from "../context/DataContext";
+import {Users} from "../components";
 
 const AllUsersPage = () => {
-    const { users: {allUsers}} = useContext(DataContext)
     return (
         <div>
-            AllUsersPage
+           <Users/>
         </div>
     );
 };

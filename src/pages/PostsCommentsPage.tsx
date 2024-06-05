@@ -1,7 +1,9 @@
+import {PostComments} from "../components";
+
 const PostsCommentsPage = () => {
     return (
         <div>
-            PostsCommentsPage
+         <PostComments/>
         </div>
     );
 };

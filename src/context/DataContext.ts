@@ -1,28 +1,19 @@
-import {createContext} from "react";
-import {IUserModel} from "../models/IUserModel";
-import {IPostModel} from "../models/IPostModel";
-import {ICommentModel} from "../models/ICommentModel";
+import {createContext, useContext} from "react";
+
+import {IUserModel, ICommentModel, IPostModel} from "../models";
 
 type DataContextType = {
-    users: {
-        allUsers: IUserModel[]
-    },
-    posts: {
-        allPosts: IPostModel[]
-    },
-    comments: {
-        allComments: ICommentModel[]
-    }
+    users: { allUsers: IUserModel[] },
+    posts: { allPosts: IPostModel[] },
+    comments: { allComments: ICommentModel[] }
 }
 const defaultValue: DataContextType = {
-    users: {
-        allUsers: []
-    },
-    posts: {
-        allPosts: []
-    },
-    comments: {
-        allComments: []
-    }
+    users: {allUsers: []},
+    posts: {allPosts: []},
+    comments: {allComments: []}
 }
-export const DataContext = createContext(defaultValue)
+const DataContext = createContext(defaultValue)
+
+const useDataContext = (): DataContextType => useContext(DataContext)
+
+export {DataContext, useDataContext}
