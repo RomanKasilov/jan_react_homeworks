@@ -24,7 +24,7 @@ const PostComments = () => {
             {dataState.map(post => <div>
                 <h3>{post.title}</h3>
                 <ul>
-                    {post.comments.map(comment => <li>{comment.body}</li>)}
+                    {post.comments.map(comment => <li>key={comment.id} {comment.body}</li>)}
                 </ul>
             </div>)}
         </div>
