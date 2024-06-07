@@ -21,10 +21,10 @@ const UserPosts = () => {
 
     return (
         <div>
-            {state.map(user => <div>
+            {state.map(user => <div key={user.id}>
                 <h3>{user.name} {user.username}</h3>
                 <ul>
-                    {user.posts.map(post => <li>{post.title}</li>)}
+                    {user.posts.map(post => <li key={post.id}>{post.title}</li>)}
                 </ul>
             </div>)}
         </div>
