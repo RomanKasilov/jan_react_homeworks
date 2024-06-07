@@ -1,10 +1,11 @@
 import {useEffect, useMemo, useState} from "react";
 
-import {useDataContext} from "../../context";
+
 import {UserWithPostsType} from "../../models";
+import {useStore} from "../../context";
 
 const UserPosts = () => {
-    const {posts: {allPosts}, users: {allUsers}} = useDataContext()
+    const {userSlice:{allUsers },postSlice:{allPosts}} = useStore()
 
     const [state, setState]
         = useState<UserWithPostsType[]>([])
@@ -21,10 +22,10 @@ const UserPosts = () => {
 
     return (
         <div>
-            {state.map(user => <div>
+            {state.map(user => <div key={user.id}>
                 <h3>{user.name} {user.username}</h3>
                 <ul>
-                    {user.posts.map(post => <li>{post.title}</li>)}
+                    {user.posts.map(post => <li key={post.id}>{post.title}</li>)}
                 </ul>
             </div>)}
         </div>

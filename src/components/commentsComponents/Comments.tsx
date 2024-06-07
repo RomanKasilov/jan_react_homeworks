@@ -1,8 +1,9 @@
 import {Comment} from "./Comment";
-import {useDataContext} from "../../context";
+import {useStore} from "../../context";
+
 
 const Comments = () => {
-    const {comments: {allComments}} = useDataContext()
+    const {commentSlice:{allComments}} = useStore()
     return (
         <div>
             {allComments.map(comment => <Comment key={comment.id} comment={comment}/>)}

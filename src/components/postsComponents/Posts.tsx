@@ -1,8 +1,9 @@
 import {Post} from "./Post";
-import {useDataContext} from "../../context";
+import {useStore} from "../../context";
+
 
 const Posts = () => {
-    const {posts: {allPosts}} = useDataContext()
+    const {postSlice:{allPosts}} = useStore()
 
     return (
         <div>

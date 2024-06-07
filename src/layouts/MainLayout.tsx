@@ -1,31 +1,28 @@
-import {useEffect, useState} from "react";
 import {Outlet} from "react-router-dom";
+import {useEffect} from "react";
 
 import {Header} from "../components";
-import {DataContext} from "../context";
+import {useStore} from "../context";
 import {commentsService, postsService, usersService} from "../services";
-import {IUserModel, ICommentModel, IPostModel} from "../models";
 
 const MainLayout = () => {
-    const [allUsers, setAllUsers] = useState<IUserModel[]>([])
-    const [allPosts, setAllPosts] = useState<IPostModel[]>([])
-    const [allComments, setAllComments] = useState<ICommentModel[]>([])
+    const {
+        userSlice: {favoriteUser, setAllUsers},
+        commentSlice: {setAllComments},
+        postSlice: {setAllPosts}
+    } = useStore()
     useEffect(() => {
-        usersService.getAllUsers().then(allUsers => setAllUsers(allUsers))
-        postsService.getAllPosts().then(allPosts => setAllPosts(allPosts))
-        commentsService.getAllComments().then(allComments => setAllComments(allComments))
-    }, []);
+        usersService.getAllUsers().then(value => setAllUsers(value))
+        postsService.getAllPosts().then(value => setAllPosts(value))
+        commentsService.getAllComments().then(value => setAllComments(value))
+    },[]);
     return (
         <div>
             <Header/>
-            <DataContext.Provider value={{
-                users: {allUsers: allUsers},
-                posts: {allPosts: allPosts},
-                comments: {allComments: allComments}
-            }}>
-                <Outlet/>
-            </DataContext.Provider>
+            <Outlet/>
 
+            <hr/>
+            {favoriteUser && <div>{favoriteUser.username}!</div>}
         </div>
     );
 };
